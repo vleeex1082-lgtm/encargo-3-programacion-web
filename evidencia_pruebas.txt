@@ -1,0 +1,11 @@
+VERIFICACIÓN DE LA APLICACIÓN
+
+Entorno local: Python 3.12.14 y Flask 3.1.3.
+
+Se ejecutó la aplicación en http://127.0.0.1:5000 y se recorrieron los dos ejercicios en Chromium con Playwright:
+- El menú muestra los botones Ejercicio 1 y Ejercicio 2.
+- Con notas 50, 50 y 50 y asistencia de 75%, el primer ejercicio muestra “Aprobado · promedio 50.0”.
+- Con los nombres Ana, Christopher e Isabel, el segundo ejercicio muestra “Christopher · 11 letras”.
+- El historial muestra los dos resultados y se vacía al terminar la captura.
+
+Las cuatro capturas corresponden a la aplicación local y se guardaron en `evidencias/`. Sus hashes SHA-256 están en `evidencias/manifiesto_capturas.json`.

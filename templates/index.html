@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Botones Estilizados{% endblock %}
+{% block body_class %}menu-page{% endblock %}
+{% block header %}{% endblock %}
+{% block main_class %}menu-main{% endblock %}
+{% block content %}
+<nav class="menu-options" aria-label="Seleccionar ejercicio">
+  <a class="menu-option" href="{{ url_for('exercise_one') }}">Ejercicio 1</a>
+  <a class="menu-option" href="{{ url_for('exercise_two') }}">Ejercicio 2</a>
+</nav>
+{% endblock %}
+{% block footer %}{% endblock %}

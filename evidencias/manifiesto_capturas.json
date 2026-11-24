@@ -1,0 +1,50 @@
+{
+  "evidencia": "Capturas de la aplicación Flask ejecutándose localmente",
+  "fecha_hora": "2026-11-23T20:51:30-03:00",
+  "navegador": "Helium 0.22.1.1 (Chromium 158.0.8127.36), Playwright headless",
+  "base_url": "http://127.0.0.1:5000",
+  "datos_de_prueba": {
+    "promedio": {
+      "notas": [
+        50,
+        50,
+        50
+      ],
+      "asistencia": 75,
+      "resultado_esperado": "Aprobado · promedio 50.0"
+    },
+    "nombres": [
+      "Ana",
+      "Christopher",
+      "Isabel"
+    ],
+    "resultado_esperado": "Christopher · 11 letras"
+  },
+  "capturas": [
+    {
+      "archivo": "captura_menu.png",
+      "pantalla": "Menú principal con dos botones",
+      "url": "http://127.0.0.1:5000/",
+      "sha256": "23a17afcb1be2bd8e07bda022028f1ab68fa5ceb97ce1fd662094914e2b5474e"
+    },
+    {
+      "archivo": "captura_resultado_promedio.png",
+      "pantalla": "Resultado del promedio con aprobación y 75% de asistencia",
+      "url": "http://127.0.0.1:5000/resultado/1",
+      "sha256": "7da2249b9c439060b21cb158592ac1e3a8097d7dd91cb118e3628f7b5f06ff34"
+    },
+    {
+      "archivo": "captura_resultado_nombres.png",
+      "pantalla": "Resultado real del nombre con más letras",
+      "url": "http://127.0.0.1:5000/resultado/2",
+      "sha256": "133c69a82531067a4a5875fcd83aa7c6b72a8c4a1d1a76e50b816c7afc09447b"
+    },
+    {
+      "archivo": "captura_historial.png",
+      "pantalla": "Historial temporal con los dos resultados capturados",
+      "url": "http://127.0.0.1:5000/historial",
+      "sha256": "9f3e44d4e5788efab5f02244e796ed79ac20a6a8b7caa2ee435a4817bab56147"
+    }
+  ],
+  "estado_final": "Historial restablecido vacío después de tomar las capturas."
+}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Resultado · Aula Flask{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('index') }}">← Volver al menú</a>
+<section class="result-card">
+  <p class="eyebrow">RESULTADO GUARDADO · {{ entry.kind|upper }}</p>
+  <div class="result-mark">✓</div>
+  <h1>{{ entry.result }}</h1>
+  <p class="intro">{{ entry.detail }}</p>
+  <p class="hint">{{ entry.created_at }}</p>
+  <div class="actions"><a class="button primary" href="{{ url_for('history') }}">Ver historial <span>→</span></a><a class="button secondary" href="{{ url_for('index') }}">Otro ejercicio</a></div>
+</section>
+{% endblock %}

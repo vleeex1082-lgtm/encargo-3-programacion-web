@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Historial · Aula Flask{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('index') }}">← Volver al menú</a>
+<section class="history-heading"><p class="eyebrow">REGISTRO EN MEMORIA</p><h1>Historial de resultados</h1><p class="intro">Los registros desaparecen al detener el servidor.</p></section>
+{% if records %}
+<form method="post" action="{{ url_for('clear_history') }}" class="clear-form"><button class="text-button" type="submit">Vaciar historial</button></form>
+<div class="record-list">
+{% for item in records %}
+<article class="record"><div><p class="eyebrow">{{ item.kind }} · {{ item.created_at }}</p><h2>{{ item.result }}</h2><p>{{ item.detail }}</p></div><form method="post" action="{{ url_for('delete_record', record_id=item.id) }}"><button class="text-button danger" type="submit" aria-label="Eliminar resultado">Eliminar</button></form></article>
+{% endfor %}
+</div>
+{% else %}
+<div class="empty-state"><h2>Aún no hay resultados</h2><p>Completa uno de los ejercicios para que aparezca aquí.</p><a class="button primary" href="{{ url_for('index') }}">Ir al menú <span>→</span></a></div>
+{% endif %}
+{% endblock %}

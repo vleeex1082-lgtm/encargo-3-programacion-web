@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ejercicios de Python y Flask para Programación Web.">
+  <title>{% block title %}Aula Flask{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  {% block header %}<header class="site-header"><a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">f</span><span>Aula<span class="brand-light">Flask</span></span></a><nav><a href="{{ url_for('index') }}">Inicio</a><a href="{{ url_for('history') }}">Historial</a></nav></header>{% endblock %}
+  <main class="{% block main_class %}{% endblock %}">
+    {% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}<div class="alerts" role="status">{% for category, message in messages %}<p class="alert {{ category }}">{{ message }}</p>{% endfor %}</div>{% endif %}{% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  {% block footer %}<footer><span>Hecho con Python + Flask</span><span>Trabajo práctico · Unidad 3</span></footer>{% endblock %}
+</body>
+</html>
